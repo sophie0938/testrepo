@@ -5,7 +5,7 @@ document.getElementById("searchBth").addEventListener("click", () => {
         resultDiv.innerHTML = "<p>ユーザー名を入力してください。</p>";
         return;
     }
-    fetch(`http://api.github.com/users/${username}`)
+    fetch(`https://api.github.com/users/${username}`)
         .then(res => {
             if (!res.ok) throw new Error("ユーザーが見つかりませんでした");
             return res.json();
